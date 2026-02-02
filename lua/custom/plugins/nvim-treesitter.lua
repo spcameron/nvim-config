@@ -24,6 +24,7 @@ return {
       'javascript',
       'json',
       'json5',
+      'just',
       'kotlin',
       -- 'latex',
       'lua',
