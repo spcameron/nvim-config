@@ -143,6 +143,7 @@ return {
     -- `on_attach` mutates the server capabilities for these only
 
     local no_format_ft = {
+      bash = true,
       clojure = true,
       css = true,
       go = true,
@@ -151,8 +152,10 @@ return {
       javascriptreact = true,
       lua = true,
       python = true,
+      sh = true,
       typescript = true,
       typescriptreact = true,
+      zsh = true,
     }
 
     local function on_attach(client, bufnr)
@@ -262,6 +265,8 @@ return {
       'goimports',
       'prettier',
       'ruff',
+      'shellcheck',
+      'shfmt',
       'stylua',
     }
 

@@ -35,6 +35,7 @@ return {
       end
     end,
     formatters_by_ft = {
+      bash = { 'shfmt' },
       css = { 'prettier' },
       go = { 'goimports' },
       html = { 'prettier' },
@@ -42,13 +43,18 @@ return {
       javascriptreact = { 'eslint_d', 'prettier' },
       lua = { 'stylua' },
       python = { 'ruff_fix', 'black' },
+      sh = { 'shfmt' },
       sql = { 'pg_format' },
       typescript = { 'eslint_d', 'prettier' },
       typescriptreact = { 'eslint_d', 'prettier' },
+      zsh = { 'shfmt' },
     },
     formatters = {
       eslint_d = {
         prefer_local = 'node_modules/.bin',
+      },
+      shfmt = {
+        prepend_args = { '-i', '2' },
       },
     },
   },
