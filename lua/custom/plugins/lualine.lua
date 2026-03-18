@@ -62,7 +62,7 @@ return {
 
     return {
       options = {
-        theme = 'catppuccin',
+        theme = 'auto',
         icons_enabled = has_icons,
         globalstatus = false,
         component_separators = has_icons and { left = '', right = '' } or { left = '', right = '' },
