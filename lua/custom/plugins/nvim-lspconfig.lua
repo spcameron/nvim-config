@@ -153,6 +153,7 @@ return {
       lua = true,
       python = true,
       sh = true,
+      templ = true,
       typescript = true,
       typescriptreact = true,
       zsh = true,
@@ -247,6 +248,13 @@ return {
 
       -- SQL
       -- sqls = { on_attach = on_attach },
+
+      -- templ
+      templ = {
+        on_attach = on_attach,
+        filetypes = { 'templ' },
+        cmd = { 'templ', 'lsp' },
+      },
 
       -- TypeScript / JavaScript
       ts_ls = { on_attach = on_attach }, -- consider 'vtsls' if you want; same on_attach
