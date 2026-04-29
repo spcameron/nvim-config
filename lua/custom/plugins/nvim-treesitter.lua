@@ -47,8 +47,11 @@ return {
     highlight = {
       enable = true,
       additional_vim_regex_highlighting = { 'ruby' },
-      -- Disable TS highlight for files > 1 MiB
-      disable = function(_, buf)
+      disable = function(lang, buf)
+        if lang == 'markdown' or lang == 'markdown_inline' then
+          return true
+        end
+
         local uv = vim.uv or vim.loop
         local ok, stat = pcall(uv.fs_stat, vim.api.nvim_buf_get_name(buf))
         return ok and stat and stat.size > 1024 * 1024
@@ -56,7 +59,7 @@ return {
     },
     indent = {
       enable = true,
-      disable = { 'ruby', 'yaml' },
+      disable = { 'ruby', 'yaml', 'markdown', 'markdown_inline' },
     },
   },
 }

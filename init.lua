@@ -26,39 +26,6 @@ rtp:prepend(lazypath)
 
 require('lazy').setup({
   { import = 'custom.plugins' },
-
-  -- [[ all plugins stored in lua/custom/plugins/ ]]
-  --
-  -- alpha.lua
-  -- blink.lua
-  -- bufferline.lua
-  -- colorscheme.lua
-  -- conform.lua
-  -- fidget.lua
-  -- friendly-snippets.lua
-  -- gitsigns.lua
-  -- guess-indent.lua
-  -- indent-blankline.lua
-  -- lazydev.lua
-  -- lualine.lua
-  -- luasnip.lua
-  -- mason.lua
-  -- mini.lua
-  -- neo-tree.lua
-  -- nvim-autopairs.lua
-  -- nvim-dap.lua
-  -- nvim-lint.lua
-  -- nvim-lspconfig.lua
-  -- nvim-notify.lua
-  -- nvim-treesitter-context.lua
-  -- nvim-treesitter-textobjects.lua
-  -- nvim-treesitter.lua
-  -- nvim-web-devicons.lua
-  -- telescope-fzf-native.lua
-  -- telescope.lua
-  -- todo-comments.lua
-  -- trouble.lua
-  -- which-key.lua
 }, {
   ui = {
     icons = vim.g.have_nerd_font and {} or {
